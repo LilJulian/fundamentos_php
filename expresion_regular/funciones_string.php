@@ -13,10 +13,11 @@
 
 // $resultado = preg_match_all($exp, $texto, $coincidencias, PREG_OFFSET_CAPTURE);
 // $exp = "/[\D]/";
-$texto = "grupo ADSO 218";
+$texto = "Ab2Cd1";
 // $exp = "/[A-Z]{4,}/";
 // $exp = "/([A-Z]{4,}).([0-9]{2,})/";
-$exp = "/[\W]/";
+// $exp = "/(?=.*[A-Z]){4,]}(?=.*[a-z])(?=.*\d)/";
+$exp = "/(?=.*([A-Z]){2})(?=.*([a-z]){2}).(?=.*(\d){2})/";
 $resultado = preg_match_all($exp, $texto, $coincidencias, PREG_OFFSET_CAPTURE);
 
 echo "<pre>";
